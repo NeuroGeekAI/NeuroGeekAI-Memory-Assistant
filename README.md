@@ -207,6 +207,106 @@ chmod +x save_cursor_chat.py
 
 
 
+## 🛠️ Scripts Disponibles / Available Scripts
+
+### 1️⃣ save_memory.py
+[description précédente]
+
+### 2️⃣ save_cursor_chat.py
+[description précédente]
+
+### 3️⃣ create_summary.py
+Script de création de résumé des conversations pour une vue d'ensemble rapide.
+
+```python
+# Configuration requise
+Python 3.8+
+Modules: json, pathlib, datetime
+```
+
+#### 📋 Fonctionnalités du Résumé / Summary Features
+- Création d'un aperçu chronologique
+- Extraction des titres de conversation
+- Prévisualisation du début des échanges
+- Formatage avec emojis
+- Tri par date
+
+#### 📄 Format du Résumé / Summary Format
+```
+📚 RÉSUMÉ DES CONVERSATIONS CURSOR 📚
+=====================================
+
+📅 DD/MM/YYYY HH:MM
+📝 Titre de la conversation
+💬 Début: [Premiers 100 caractères de la conversation]...
+-----------------------------------
+
+[...autres conversations...]
+
+✨ Fin du résumé ✨
+```
+
+#### 💻 Utilisation / Usage
+```bash
+# Donner les droits d'exécution
+chmod +x create_summary.py
+
+# Exécuter le script
+./create_summary.py
+```
+
+#### 🔄 Workflow Complet / Complete Workflow
+
+1. **Sauvegarde Initiale**
+   ```bash
+   ./save_cursor_chat.py
+   ```
+
+2. **Création du Résumé**
+   ```bash
+   ./create_summary.py
+   ```
+
+3. **Consultation**
+   - Ouvrir `chat_summary.txt`
+   - Parcourir les conversations par date
+   - Identifier les discussions importantes
+
+### 📊 Organisation Recommandée / Recommended Organization
+
+```
+project/
+├── cursor_exports/          # Fichiers JSON Cursor
+├── vie_privee/             # Sauvegardes détaillées
+├── save_memory.py          # Script de sauvegarde initial
+├── save_cursor_chat.py     # Script de sauvegarde avancé
+├── create_summary.py       # Générateur de résumé
+├── chat_summary.txt        # Résumé des conversations
+└── README.md              # Documentation
+```
+
+### 🔁 Cycle de Travail Suggéré / Suggested Workflow
+
+1. **Export Quotidien**
+   - Exporter conversations Cursor
+   - Placer dans `cursor_exports/`
+
+2. **Sauvegarde**
+   - Exécuter `save_cursor_chat.py`
+   - Vérifier `vie_privee/`
+
+3. **Vue d'Ensemble**
+   - Exécuter `create_summary.py`
+   - Consulter `chat_summary.txt`
+
+4. **Maintenance**
+   - Archiver anciens exports
+   - Mettre à jour résumé
+   - Sauvegarder régulièrement
+
+
+
+
 
 ## 📝 Licence
 Voir le fichier [LICENSE](LICENSE) pour plus de détails.
