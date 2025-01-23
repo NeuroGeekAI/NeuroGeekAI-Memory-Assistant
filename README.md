@@ -124,6 +124,88 @@ chmod +x save_memory.py
 - Les espaces superflus sont automatiquement nettoyés
 
 
+## 🛠️ Scripts Disponibles / Available Scripts
+
+### 1️⃣ save_memory.py
+[description précédente]
+
+### 2️⃣ save_cursor_chat.py
+Script de sauvegarde avancé avec gestion des emojis et formatage amélioré.
+
+```python
+# Configuration requise
+Python 3.8+
+Modules: json, pathlib, datetime, re
+```
+
+#### 🔧 Fonctionnalités Spécifiques / Specific Features
+- Nettoyage intelligent des espaces
+- Formatage avec emojis
+- Gestion des caractères spéciaux
+- Horodatage précis
+- Détection des doublons
+
+#### 📂 Structure des Fichiers de Sortie / Output File Structure
+```
+vie_privee_YYYYMMDD_HHMM_NomFichier.txt
+```
+
+#### 🎯 Format de Sortie / Output Format
+```
+🔐 SAUVEGARDE CONVERSATION
+📅 DATE: DD/MM/YYYY HH:MM
+==================================================
+👤 MOI:
+[Message utilisateur nettoyé]
+--------------------
+🤖 ASSISTANT:
+[Réponse assistant nettoyée]
+--------------------
+🔒 FIN SAUVEGARDE
+```
+
+#### 💻 Utilisation / Usage
+```bash
+# Installation
+git clone https://github.com/NeuroGeekAI/NeuroGeekAI-Memory-Assistant.git
+cd NeuroGeekAI-Memory-Assistant
+
+# Configuration
+mkdir cursor_exports
+mkdir vie_privee
+
+# Exécution
+chmod +x save_cursor_chat.py
+./save_cursor_chat.py
+```
+
+#### 📊 Retours Console / Console Output
+```
+🔍 Traitement des fichiers...
+✅ Nouveaux fichiers sauvegardés
+⏭️ Fichiers ignorés (doublons)
+📂 Emplacement des sauvegardes
+```
+
+### 🔄 Workflow Recommandé / Recommended Workflow
+
+1. **Export Cursor**
+   - Ouvrir Cursor Editor
+   - Exporter les conversations en JSON
+   - Placer les fichiers dans `cursor_exports/`
+
+2. **Sauvegarde**
+   - Exécuter le script
+   - Vérifier les nouveaux fichiers dans `vie_privee/`
+   - Archiver les exports JSON si nécessaire
+
+3. **Maintenance**
+   - Nettoyer régulièrement `cursor_exports/`
+   - Vérifier les sauvegardes dans `vie_privee/`
+   - Faire des backups des conversations importantes
+
+
+
 
 
 ## 📝 Licence
